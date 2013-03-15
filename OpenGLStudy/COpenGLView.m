@@ -49,9 +49,33 @@
         m_pGLContext = [ [EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2 ];
         [ m_pGLContext renderbufferStorage:GL_RENDERBUFFER fromDrawable:( CAEAGLLayer* )self.layer ];
 
+        
+        [ self beginAnimationing];
         printf("(%f,%f\n",width,height);
     }
     return self;
 }
+- (void)drawFrame {
+    //draw stuff
+glClearColor( 0.8f, 0.85f, 0.9f, 1.0f );
+    glClear( GL_COLOR_BUFFER_BIT );
+[ m_pGLContext presentRenderbuffer:GL_RENDERBUFFER ];
+}
 
-@end
+- (void)destroy {
+   // if(resourcesLoaded)
+    {
+        [m_DisplayLink invalidate];
+        //free resources
+     //   resourcesLoaded = NO;
+    }
+}
+- (void)beginAnimationing {
+    m_DisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(drawFrame)];
+    [m_DisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+}
+- (void)endAnimationing {
+    [m_DisplayLink invalidate];
+    m_DisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(destroy)];
+    [m_DisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+}@end

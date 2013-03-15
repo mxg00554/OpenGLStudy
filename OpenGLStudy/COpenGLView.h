@@ -15,5 +15,6 @@
     GLuint          m_hColorRenderBuffer;   //!< OpenGl カラーレンダバッファハンドル
     GLuint          m_hDepthRenderbuffer;   //!< OpenGl デプスレンダバッファハンドル
 
+    CADisplayLink *   m_DisplayLink;
 }
 @end
