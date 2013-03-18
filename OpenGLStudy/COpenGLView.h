@@ -16,5 +16,9 @@
     GLuint          m_hDepthRenderbuffer;   //!< OpenGl デプスレンダバッファハンドル
 
     CADisplayLink *   m_DisplayLink;
+
+    float               m_fAnimationFrame;
 }
 @end
+
+void checkFramebufferStatus();
