@@ -24,6 +24,10 @@
 		870CA9E316F2EBCF000CFE63 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 870CA9E116F2EBCF000CFE63 /* ViewController.xib */; };
 		870CA9EB16F2ED5B000CFE63 /* COpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 870CA9EA16F2ED5B000CFE63 /* COpenGLView.m */; };
 		870CA9ED16F2EF6B000CFE63 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870CA9EC16F2EF6B000CFE63 /* QuartzCore.framework */; };
+		87458D2016F7064500B39E25 /* ipaFont_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 87458D1816F7064500B39E25 /* ipaFont_0.png */; };
+		87458D2116F7064500B39E25 /* ipaFont_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 87458D1916F7064500B39E25 /* ipaFont_1.png */; };
+		87458D2216F7064500B39E25 /* ipaFont_index.bin in Resources */ = {isa = PBXBuildFile; fileRef = 87458D1A16F7064500B39E25 /* ipaFont_index.bin */; };
+		87458D2316F7064500B39E25 /* ipaFont_param.bin in Resources */ = {isa = PBXBuildFile; fileRef = 87458D1B16F7064500B39E25 /* ipaFont_param.bin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		870CA9E916F2ED5B000CFE63 /* COpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = COpenGLView.h; path = OpenGLStudy/COpenGLView.h; sourceTree = "<group>"; };
 		870CA9EA16F2ED5B000CFE63 /* COpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = COpenGLView.m; path = OpenGLStudy/COpenGLView.m; sourceTree = "<group>"; };
 		870CA9EC16F2EF6B000CFE63 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		87458D1816F7064500B39E25 /* ipaFont_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipaFont_0.png; sourceTree = "<group>"; };
+		87458D1916F7064500B39E25 /* ipaFont_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipaFont_1.png; sourceTree = "<group>"; };
+		87458D1A16F7064500B39E25 /* ipaFont_index.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ipaFont_index.bin; sourceTree = "<group>"; };
+		87458D1B16F7064500B39E25 /* ipaFont_param.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ipaFont_param.bin; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 		870CA9B216F2EBCF000CFE63 = {
 			isa = PBXGroup;
 			children = (
+				87458D1216F7060D00B39E25 /* Resources */,
 				870CA9EC16F2EF6B000CFE63 /* QuartzCore.framework */,
 				870CA9E916F2ED5B000CFE63 /* COpenGLView.h */,
 				870CA9EA16F2ED5B000CFE63 /* COpenGLView.m */,
@@ -128,6 +137,26 @@
 				870CA9D816F2EBCF000CFE63 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87458D1216F7060D00B39E25 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				87458D1316F7064500B39E25 /* ipaFont */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		87458D1316F7064500B39E25 /* ipaFont */ = {
+			isa = PBXGroup;
+			children = (
+				87458D1816F7064500B39E25 /* ipaFont_0.png */,
+				87458D1916F7064500B39E25 /* ipaFont_1.png */,
+				87458D1A16F7064500B39E25 /* ipaFont_index.bin */,
+				87458D1B16F7064500B39E25 /* ipaFont_param.bin */,
+			);
+			name = ipaFont;
+			path = OpenGLStudy/Resoutces/ipaFont;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +217,10 @@
 				870CA9DB16F2EBCF000CFE63 /* Shader.fsh in Resources */,
 				870CA9DD16F2EBCF000CFE63 /* Shader.vsh in Resources */,
 				870CA9E316F2EBCF000CFE63 /* ViewController.xib in Resources */,
+				87458D2016F7064500B39E25 /* ipaFont_0.png in Resources */,
+				87458D2116F7064500B39E25 /* ipaFont_1.png in Resources */,
+				87458D2216F7064500B39E25 /* ipaFont_index.bin in Resources */,
+				87458D2316F7064500B39E25 /* ipaFont_param.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +357,7 @@
 				870CA9E816F2EBCF000CFE63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

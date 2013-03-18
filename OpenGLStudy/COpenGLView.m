@@ -16,16 +16,6 @@
 {
 	return [ CAEAGLLayer class ];
 }
-
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 - ( id ) initWithCoder:(NSCoder *)aDecoder
 {
     self = [ super initWithCoder:aDecoder ];
@@ -66,18 +56,22 @@
 
         [ self beginAnimationing];
         printf("(%d,%d)\n",iWidth,iHeight);
+        NSBundle *bundle = [NSBundle mainBundle];
+        NSString *path = [bundle pathForResource:@"ipaFont_0" ofType:@"png"];
+        NSData *data = [[NSData alloc] initWithContentsOfFile:path];
+        unsigned char const* pData = [data bytes];
+        int dataSize = [data length];
+
     }
     return self;
 }
 - (void)drawFrame {
-    //draw stuff
     m_fAnimationFrame += 1;
     [EAGLContext setCurrentContext:m_pGLContext];
     glClearColor( sinf(m_fAnimationFrame*0.1f)*0.5f+0.5f, 0.0f, 0.0f, 1.0f );
-    glClear( GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT );
+    glClear( GL_STENCIL_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT );
     [ m_pGLContext presentRenderbuffer:GL_RENDERBUFFER ];
 }
-
 - (void)destroy {
    // if(resourcesLoaded)
     {
